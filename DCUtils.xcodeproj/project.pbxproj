@@ -28,10 +28,10 @@
 		787D8ED121792AF20058D6CF /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB221792AF10058D6CF /* DeepLink.swift */; };
 		787D8ED221792AF20058D6CF /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB221792AF10058D6CF /* DeepLink.swift */; };
 		787D8ED321792AF20058D6CF /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB221792AF10058D6CF /* DeepLink.swift */; };
-		787D8ED521792AF20058D6CF /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Debug.swift */; };
-		787D8ED621792AF20058D6CF /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Debug.swift */; };
-		787D8ED721792AF20058D6CF /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Debug.swift */; };
-		787D8ED821792AF20058D6CF /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Debug.swift */; };
+		787D8ED521792AF20058D6CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Utils.swift */; };
+		787D8ED621792AF20058D6CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Utils.swift */; };
+		787D8ED721792AF20058D6CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Utils.swift */; };
+		787D8ED821792AF20058D6CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB321792AF10058D6CF /* Utils.swift */; };
 		787D8EDA21792AF20058D6CF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB521792AF10058D6CF /* Date.swift */; };
 		787D8EDB21792AF20058D6CF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB521792AF10058D6CF /* Date.swift */; };
 		787D8EDC21792AF20058D6CF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB521792AF10058D6CF /* Date.swift */; };
@@ -122,7 +122,7 @@
 		787D8EB021792AF10058D6CF /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		787D8EB121792AF10058D6CF /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		787D8EB221792AF10058D6CF /* DeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
-		787D8EB321792AF10058D6CF /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		787D8EB321792AF10058D6CF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		787D8EB521792AF10058D6CF /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		787D8EB621792AF10058D6CF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		787D8EB721792AF10058D6CF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 				787D8EB021792AF10058D6CF /* Geometry.swift */,
 				787D8EB121792AF10058D6CF /* Localization.swift */,
 				787D8EB221792AF10058D6CF /* DeepLink.swift */,
-				787D8EB321792AF10058D6CF /* Debug.swift */,
+				787D8EB321792AF10058D6CF /* Utils.swift */,
 			);
 			name = Classes;
 			path = ../../dcfoundation/DCFoundation/Classes;
@@ -526,7 +526,7 @@
 				787D8ED021792AF20058D6CF /* DeepLink.swift in Sources */,
 				787D8EDA21792AF20058D6CF /* Date.swift in Sources */,
 				787D8F2021792AF20058D6CF /* Bundle.swift in Sources */,
-				787D8ED521792AF20058D6CF /* Debug.swift in Sources */,
+				787D8ED521792AF20058D6CF /* Utils.swift in Sources */,
 				787D8EDF21792AF20058D6CF /* Array.swift in Sources */,
 				787D8EFD21792AF20058D6CF /* CollectionType.swift in Sources */,
 				787D8EF821792AF20058D6CF /* Number.swift in Sources */,
@@ -553,7 +553,7 @@
 				787D8ED121792AF20058D6CF /* DeepLink.swift in Sources */,
 				787D8EDB21792AF20058D6CF /* Date.swift in Sources */,
 				787D8F2121792AF20058D6CF /* Bundle.swift in Sources */,
-				787D8ED621792AF20058D6CF /* Debug.swift in Sources */,
+				787D8ED621792AF20058D6CF /* Utils.swift in Sources */,
 				787D8EE021792AF20058D6CF /* Array.swift in Sources */,
 				787D8EFE21792AF20058D6CF /* CollectionType.swift in Sources */,
 				787D8EF921792AF20058D6CF /* Number.swift in Sources */,
@@ -580,7 +580,7 @@
 				787D8ED221792AF20058D6CF /* DeepLink.swift in Sources */,
 				787D8EDC21792AF20058D6CF /* Date.swift in Sources */,
 				787D8F2221792AF20058D6CF /* Bundle.swift in Sources */,
-				787D8ED721792AF20058D6CF /* Debug.swift in Sources */,
+				787D8ED721792AF20058D6CF /* Utils.swift in Sources */,
 				787D8EE121792AF20058D6CF /* Array.swift in Sources */,
 				787D8EFF21792AF20058D6CF /* CollectionType.swift in Sources */,
 				787D8EFA21792AF20058D6CF /* Number.swift in Sources */,
@@ -607,7 +607,7 @@
 				787D8ED321792AF20058D6CF /* DeepLink.swift in Sources */,
 				787D8EDD21792AF20058D6CF /* Date.swift in Sources */,
 				787D8F2321792AF20058D6CF /* Bundle.swift in Sources */,
-				787D8ED821792AF20058D6CF /* Debug.swift in Sources */,
+				787D8ED821792AF20058D6CF /* Utils.swift in Sources */,
 				787D8EE221792AF20058D6CF /* Array.swift in Sources */,
 				787D8F0021792AF20058D6CF /* CollectionType.swift in Sources */,
 				787D8EFB21792AF20058D6CF /* Number.swift in Sources */,
