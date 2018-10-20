@@ -7,6 +7,10 @@ import Foundation
 fileprivate var sharedLog: NSObject?
 fileprivate var logExist = true
 
+public enum Logs {
+    static public let `weak` = Utils.Log.Weak()
+}
+
 extension Utils.Log {
     public class Weak {
     
@@ -56,8 +60,3 @@ extension Utils.Log.Event {
         self.init(tag: tag, category: category, priority: priority, parameters: ["error" : error])
     }
 }
-
-public enum Logs {
-    static let `weak` = Utils.Log.Weak()
-}
-
