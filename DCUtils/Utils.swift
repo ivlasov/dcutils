@@ -4,13 +4,14 @@
 
 import Foundation
 
-fileprivate let domain = "com.dclife.utils"
-
 public enum Utils {
-    enum Log {
-        static let `default`    = "\(domain)|default"
-        static let json         = "\(domain)|json"
-        static let fileSystem   = "\(domain)|fileSystem"
+    public enum Log {
+        static let domain = "com.dclife.utils"
+        enum Category {
+            static let `default`    = "\(Utils.Log.domain)|default"
+            static let json         = "\(Utils.Log.domain)|json"
+            static let fileSystem   = "\(Utils.Log.domain)|fileSystem"
+        }
     }
 }
 
