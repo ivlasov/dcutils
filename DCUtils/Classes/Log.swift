@@ -8,18 +8,7 @@ fileprivate var sharedLog: NSObject?
 fileprivate var logExist = true
 
 extension Utils.Log {
-    public class Default {
-        static let shared = Utils.Log.Default()
-        fileprivate init() {}
-    }
-}
-
-extension Utils.Log {
     public class Weak {
-        
-        static let shared = Utils.Log.Weak()
-        
-        fileprivate init() {}
     
         public func append(event: Utils.Log.Event) {
             if logExist && sharedLog == nil {
@@ -68,10 +57,7 @@ extension Utils.Log.Event {
     }
 }
 
-func Logs() -> Utils.Log.Default {
-    return Utils.Log.Default.shared
+public enum Logs {
+    static let `weak` = Utils.Log.Weak()
 }
 
-func LogsWeak() -> Utils.Log.Weak {
-    return Utils.Log.Weak.shared
-}

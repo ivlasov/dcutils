@@ -10,7 +10,7 @@ extension Encodable {
             let coder = JSONEncoder()
             return try coder.encode(self)
         } catch {
-            LogsWeak() << Utils.Log.Event(category: Utils.Log.Category.json, error: error)
+            Logs.weak << Utils.Log.Event(category: Utils.Log.Category.json, error: error)
             return nil
         }
     }
@@ -21,7 +21,7 @@ extension Dictionary where Key == String {
         do {
             return try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
         } catch {
-            LogsWeak() << Utils.Log.Event(category: Utils.Log.Category.json, error: error)
+            Logs.weak << Utils.Log.Event(category: Utils.Log.Category.json, error: error)
             return nil
         }
     }
