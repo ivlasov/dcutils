@@ -4,6 +4,12 @@
 
 import Foundation
 
+extension Dictionary where Key == String {
+    public func jsonData() -> Data? {
+        return try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+    }
+}
+
 extension Dictionary {
     
     public var allKeys: [Key] {

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78446520217BDBC1008F6C9D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844651F217BDBC1008F6C9D /* Log.swift */; };
+		78446521217BDBDA008F6C9D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844651F217BDBC1008F6C9D /* Log.swift */; };
+		78446522217BDBDA008F6C9D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844651F217BDBC1008F6C9D /* Log.swift */; };
+		78446523217BDBDB008F6C9D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844651F217BDBC1008F6C9D /* Log.swift */; };
 		787D8E6E21792A7D0058D6CF /* DCUtils_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 787D8E6C21792A7D0058D6CF /* DCUtils_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		787D8E7B21792A8A0058D6CF /* DCUtils_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 787D8E7921792A8A0058D6CF /* DCUtils_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		787D8E8821792A940058D6CF /* DCUtils_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 787D8E8621792A940058D6CF /* DCUtils_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -99,6 +103,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7844651F217BDBC1008F6C9D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		787D8E6A21792A7D0058D6CF /* DCUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		787D8E6C21792A7D0058D6CF /* DCUtils_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCUtils_iOS.h; sourceTree = "<group>"; };
 		787D8E6D21792A7D0058D6CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -292,6 +297,7 @@
 				787D8FA62179317C0058D6CF /* Localization.swift */,
 				787D8FA72179317C0058D6CF /* DeepLink.swift */,
 				787D8FA82179317C0058D6CF /* Utils.swift */,
+				7844651F217BDBC1008F6C9D /* Log.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 				787D8FD12179317C0058D6CF /* Notification.swift in Sources */,
 				787D8FB92179317C0058D6CF /* Runtime.swift in Sources */,
 				787D8FC92179317C0058D6CF /* Operators.swift in Sources */,
+				78446520217BDBC1008F6C9D /* Log.swift in Sources */,
 				787D8FF52179317C0058D6CF /* Utils.swift in Sources */,
 				787D8FED2179317C0058D6CF /* Localization.swift in Sources */,
 				787D8FDD2179317C0058D6CF /* UserDefaults.swift in Sources */,
@@ -553,6 +560,7 @@
 				787D8FC22179317C0058D6CF /* Number.swift in Sources */,
 				787D8FB22179317C0058D6CF /* Data.swift in Sources */,
 				787D8FAE2179317C0058D6CF /* Array.swift in Sources */,
+				78446521217BDBDA008F6C9D /* Log.swift in Sources */,
 				787D8FB62179317C0058D6CF /* Locale.swift in Sources */,
 				787D8FC62179317C0058D6CF /* CollectionType.swift in Sources */,
 				787D8FBE2179317C0058D6CF /* FileSystem.swift in Sources */,
@@ -580,6 +588,7 @@
 				787D8FC32179317C0058D6CF /* Number.swift in Sources */,
 				787D8FB32179317C0058D6CF /* Data.swift in Sources */,
 				787D8FAF2179317C0058D6CF /* Array.swift in Sources */,
+				78446522217BDBDA008F6C9D /* Log.swift in Sources */,
 				787D8FB72179317C0058D6CF /* Locale.swift in Sources */,
 				787D8FC72179317C0058D6CF /* CollectionType.swift in Sources */,
 				787D8FBF2179317C0058D6CF /* FileSystem.swift in Sources */,
@@ -607,6 +616,7 @@
 				787D8FC42179317C0058D6CF /* Number.swift in Sources */,
 				787D8FB42179317C0058D6CF /* Data.swift in Sources */,
 				787D8FB02179317C0058D6CF /* Array.swift in Sources */,
+				78446523217BDBDB008F6C9D /* Log.swift in Sources */,
 				787D8FB82179317C0058D6CF /* Locale.swift in Sources */,
 				787D8FC82179317C0058D6CF /* CollectionType.swift in Sources */,
 				787D8FC02179317C0058D6CF /* FileSystem.swift in Sources */,
