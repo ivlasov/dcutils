@@ -4,9 +4,26 @@
 
 import Foundation
 
+extension Encodable {
+    public func jsonData() -> Data? {
+        do {
+            let coder = JSONEncoder()
+            return try coder.encode(self)
+        } catch {
+            LogsWeak() << Log.Event(error: error)
+            return nil
+        }
+    }
+}
+
 extension Dictionary where Key == String {
     public func jsonData() -> Data? {
-        return try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+        do {
+            return try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+        } catch {
+            LogsWeak() << Log.Event(error: error)
+            return nil
+        }
     }
 }
 

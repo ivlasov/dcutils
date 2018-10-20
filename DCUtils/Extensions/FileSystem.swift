@@ -20,7 +20,7 @@ public func DirectoryCreateAt(path: String) -> Bool {
         try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
         return true
     } catch {
-        print(error)
+        LogsWeak() << Log.Event(category: Utils.Log.fileSystem, error: error)
     }
     return false
 }
@@ -30,7 +30,7 @@ public func DirectoryContentsAt(path: String) -> [String]? {
     do {
         contents = try FileManager.default.contentsOfDirectory(atPath: path)
     } catch {
-        print(error)
+        LogsWeak() << Log.Event(category: Utils.Log.fileSystem, error: error)
     }
     return contents
 }

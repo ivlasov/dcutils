@@ -212,6 +212,7 @@
 		787D8E5C21792A5F0058D6CF /* DCUtils */ = {
 			isa = PBXGroup;
 			children = (
+				787D8FA82179317C0058D6CF /* Utils.swift */,
 				787D8FA42179317C0058D6CF /* Classes */,
 				787D8F932179317C0058D6CF /* Extensions */,
 			);
@@ -296,7 +297,6 @@
 				787D8FA52179317C0058D6CF /* Geometry.swift */,
 				787D8FA62179317C0058D6CF /* Localization.swift */,
 				787D8FA72179317C0058D6CF /* DeepLink.swift */,
-				787D8FA82179317C0058D6CF /* Utils.swift */,
 				7844651F217BDBC1008F6C9D /* Log.swift */,
 			);
 			path = Classes;
