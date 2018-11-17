@@ -80,7 +80,7 @@ open class DeepLink {
         if comps.count > 1 {
             comps.removeFirst()
             let path = (comps as NSArray).componentsJoined(by: "/")
-            if path.length == 0 {return nil}
+            if path.count == 0 {return nil}
             return DeepLink(path: path, info: info)
         }
         return nil

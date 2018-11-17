@@ -10,7 +10,7 @@ public enum Utils {
         enum Category {
             static let `default`    = "\(Utils.Log.domain)|default"
             static let json         = "\(Utils.Log.domain)|json"
-            static let fileSystem   = "\(Utils.Log.domain)|fileSystem"
+            static let storage      = "\(Utils.Log.domain)|storage"
         }
     }
 }
@@ -26,3 +26,4 @@ extension Dictionary {
         print(self)
     }
 }
+

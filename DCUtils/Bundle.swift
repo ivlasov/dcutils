@@ -4,33 +4,25 @@
 
 import Foundation
 
-public extension Bundle {
-    
+extension Bundle {
     public struct InfoDictionaryKey: Hashable {
-        
         let rawValue: String
-        
-        public init(_ rawValue: String) {
-            self.rawValue = rawValue
-        }
-        
-        public static func ==(lhs: InfoDictionaryKey, rhs: InfoDictionaryKey) -> Bool {
-            return lhs.rawValue == rhs.rawValue
-        }
-        
+        public init(_ rawValue: String) { self.rawValue = rawValue }
+        public static func ==(lhs: InfoDictionaryKey, rhs: InfoDictionaryKey) -> Bool { return lhs.rawValue == rhs.rawValue}
     }
-    
-    public var infoDictionaryKeys: [InfoDictionaryKey:Any]? {
+}
+
+extension Bundle {
+    public var infoDictionaryKeys: [InfoDictionaryKey:Any] {
         var result = [InfoDictionaryKey:Any]()
         for (key,value) in (infoDictionary ?? [:]) {
             result[InfoDictionaryKey(key)] = value
         }
-        return result.count > 0 ? result : nil
+        return result
     }
-    
 }
 
-public extension Bundle.InfoDictionaryKey {
+extension Bundle.InfoDictionaryKey {
     public static let region            = Bundle.InfoDictionaryKey(kCFBundleDevelopmentRegionKey as String)
     public static let executable        = Bundle.InfoDictionaryKey(kCFBundleExecutableKey as String)
     public static let identifier        = Bundle.InfoDictionaryKey(kCFBundleIdentifierKey as String)
@@ -40,4 +32,3 @@ public extension Bundle.InfoDictionaryKey {
     public static let infoVersion       = Bundle.InfoDictionaryKey(kCFBundleInfoDictionaryVersionKey as String)
     public static let shortVersion      = Bundle.InfoDictionaryKey(kCFBundleVersionKey as String)
 }
-

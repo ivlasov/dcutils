@@ -27,7 +27,7 @@ public func == (lhs: Point, rhs: Point) -> Bool {
 }
 
 public func + (lhs: Point, rhs: (x: Int, y: Int)) -> Point {
-    return Point(lhs.x + rhs.x.toDouble(), lhs.y + rhs.y.toDouble())
+    return Point(lhs.x + rhs.x.asDouble, lhs.y + rhs.y.asDouble)
 }
 
 public func + (lhs: Point, rhs: (x: Double, y: Double)) -> Point {

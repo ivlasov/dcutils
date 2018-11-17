@@ -22,7 +22,7 @@ extension Utils.Log {
             sharedLog?.perform(NSSelectorFromString("append:"), with: event)
         }
         
-        public static func <<(lhs: Utils.Log.Weak, rhs: Utils.Log.Event) {
+        public static func << (lhs: Utils.Log.Weak, rhs: Utils.Log.Event) {
             lhs.append(event: rhs)
         }
         
@@ -31,6 +31,7 @@ extension Utils.Log {
 
 extension Utils.Log {
     public class Event {
+        
         let tag         : String?
         let category    : String?
         let priority    : Int
