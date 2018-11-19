@@ -13,7 +13,6 @@ public enum Logs {
 
 extension Utils.Log {
     public class Weak {
-    
         public func append(event: Utils.Log.Event) {
             if logExist && sharedLog == nil {
                 guard let cls = NSClassFromString("LogObjC") as? NSObject.Type else { logExist = false; return }
@@ -25,7 +24,6 @@ extension Utils.Log {
         public static func << (lhs: Utils.Log.Weak, rhs: Utils.Log.Event) {
             lhs.append(event: rhs)
         }
-        
     }
 }
 
@@ -61,3 +59,17 @@ extension Utils.Log.Event {
         self.init(tag: tag, category: category, priority: priority, parameters: ["error" : error])
     }
 }
+
+fileprivate class LogService {
+    static let shared = LogService()
+}
+
+func Log() -> LogService {
+    return LogService.shared
+}
+
+public static func << (lhs: LogService, rhs: String) {
+    if let log = Logs.
+}
+
+

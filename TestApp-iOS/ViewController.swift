@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Logs.weak
+        
         var pair = Pair(1, 1)
         pair.first = 0
         pair.second = 1
