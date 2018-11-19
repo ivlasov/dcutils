@@ -64,12 +64,12 @@ fileprivate class LogService {
     static let shared = LogService()
 }
 
-func Log() -> LogService {
-    return LogService.shared
-}
+//func Log() -> LogService {
+//    return LogService.shared
+//}
 
-public static func << (lhs: LogService, rhs: String) {
-    if let log = Logs.
-}
-
+//public static func << (lhs: LogService, rhs: String) {
+//    if let log = Logs.
+//}
+//
 
