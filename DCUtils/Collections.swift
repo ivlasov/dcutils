@@ -83,7 +83,7 @@ public extension Array where Element: CustomStringConvertible {
 
 extension Array {
     public func array(range: NSRange) -> Array<Element> {
-        return transform(range: range) { (_,element) in return element } ?? []
+        return transformed(range: range) { (_,element) in return element } ?? []
     }
 }
 
