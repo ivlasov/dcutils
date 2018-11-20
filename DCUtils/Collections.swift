@@ -88,7 +88,7 @@ extension Array {
 }
 
 extension Array {
-    public static func enumerate<T>(count: Int, _ handler: (_ idx: Int) -> T?) -> Array<T> {
+    public func enumerate<T>(count: Int, _ handler: (_ idx: Int) -> T?) -> Array<T> {
         var list = [T]()
         for i in 0 ..< count {
             if let value = handler(i) { list << value }
