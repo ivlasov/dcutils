@@ -5,7 +5,7 @@
 import Foundation
 
 extension NSError {
-    public static func localized(key: String?, code: Int? = nil, domain: String? = nil, userInfo:[String:Any]? = nil) -> Error? {
+    public static func localized(key: String?, code: Int? = nil, domain: String? = nil, userInfo:[String:Any]? = nil) -> NSError? {
         guard let key = key else { return nil }
         let code = code ?? -1
         var domain: String! = domain
