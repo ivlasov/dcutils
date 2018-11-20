@@ -4,7 +4,7 @@
 
 import Foundation
 
-extension Error {
+extension NSError {
     public static func localized(key: String?, code: Int? = nil, domain: String? = nil, userInfo:[String:Any]? = nil) -> Error? {
         guard let key = key else { return nil }
         let code = code ?? -1
@@ -16,6 +16,6 @@ extension Error {
                 domain = (Bundle.main.infoDictionaryKeys[.identifier] as? String) ?? "com.dclife.error"
             }
         }
-        return NSError(domain: domain, code: code, userInfo: ([NSLocalizedDescriptionKey:key.localized]) + userInfo) as! Self
+        return NSError(domain: domain, code: code, userInfo: ([NSLocalizedDescriptionKey:key.localized]) + userInfo)
     }
 }
