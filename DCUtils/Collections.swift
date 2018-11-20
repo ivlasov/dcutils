@@ -52,7 +52,7 @@ public func + <T>(lhs: Array<T>?, rhs: Array<T>?) -> Array<T>  {
 }
 
 extension Array {
-    public func transform<T>(range: NSRange? = nil, _ transformation: (_ idx: Int, _ item: Element) -> T?) -> Array<T>? {
+    public func transformed<T>(range: NSRange? = nil, _ transformation: (_ idx: Int, _ item: Element) -> T?) -> Array<T>? {
         var list = [T]()
         let range = range ?? NSMakeRange(0, count)
         for i in range.location ..< range.location + range.length {
@@ -63,8 +63,8 @@ extension Array {
 }
 
 extension Array {
-    public func transform<T>(range: NSRange? = nil, _ transformation: (_ idx: Int, _ item: Element) -> T?) -> Array<T> {
-        return transform(transformation) ?? []
+    public func transformed<T>(range: NSRange? = nil, _ transformation: (_ idx: Int, _ item: Element) -> T?) -> Array<T> {
+        return transformed(transformation) ?? []
     }
 }
 
