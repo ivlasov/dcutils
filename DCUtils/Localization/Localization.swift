@@ -18,6 +18,7 @@ public class Localization {
     
     static let currentKey = "Localization.currentKey"
     
+    public static var useDebug = false
     public static var useEmptyKeys = true
     public static var showDefaultLanguageOnEmpty = true
     
@@ -68,7 +69,11 @@ public class Localization {
         }
     }
     
+    static var isPreloaded = false
+    
     static func preload() {
+        if isPreloaded { return }
+        isPreloaded = true
         guard available.count == 0 else { return }
         for identifier in Locale.availableIdentifiers {
             let pathFormat = "%@/%@.lproj"
@@ -83,7 +88,7 @@ public class Localization {
         if available.count == 0, let localization = Localization(identifier: "en_US") {
             if let path = Bundle.main.path(forResource: "Localizable", ofType: "strings") {
                 localization.add(path: path)
-            } else {
+            } else if useDebug {
                 let comps = NSHomeDirectory().components(separatedBy: "/")
                 if comps.count > 2 {
                     let home = "/" + comps[1] + "/" + comps[2]
@@ -128,9 +133,15 @@ public class Localization {
         if let name = (locale as NSLocale).displayName(forKey: .identifier, value: identifier) {
             self.name = name
         } else { return nil }
-        if let localizedName = (Localization.current.locale as NSLocale).displayName(forKey: .identifier, value: identifier) {
-            self.localizedName = localizedName
-        } else { return nil }
+        if identifier == "en_US" {
+            self.localizedName = self.name
+        } else {
+            if let localizedName = (Localization.current.locale as NSLocale).displayName(forKey: .identifier, value: identifier) {
+                self.localizedName = localizedName
+            } else {
+                return nil
+            }
+        }
     }
     
     public subscript(key: String) -> String {
