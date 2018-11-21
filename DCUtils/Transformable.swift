@@ -17,7 +17,7 @@ public protocol TransformableType {
 
 extension TransformableType {
     public static func asRegister<T:TransformableType>(type: T.Type, direct: @escaping (Self?) throws -> T?, reverse: @escaping (T?) throws -> Self?) rethrows {
-        AsTransformableImplementaion.register(transformation: try AsTransform(direct, reverse))
+        AsTransformableImplementaion.register(transformation: try AsTransform(reverse, direct))
     }
 }
 
