@@ -85,7 +85,7 @@ public class Localization {
                 available << localization
             }
         }
-        if available.count == 0, let localization = Localization(identifier: "en_US") {
+        if available.count == 0, let localization = Localization(identifier: "en") {
             if let path = Bundle.main.path(forResource: "Localizable", ofType: "strings") {
                 localization.add(path: path)
             } else if useDebug {
@@ -133,7 +133,7 @@ public class Localization {
         if let name = (locale as NSLocale).displayName(forKey: .identifier, value: identifier) {
             self.name = name
         } else { return nil }
-        if identifier == "en_US" {
+        if identifier == "en" {
             self.localizedName = self.name
         } else {
             if let localizedName = (Localization.current.locale as NSLocale).displayName(forKey: .identifier, value: identifier) {
