@@ -92,6 +92,15 @@ extension Storage {
             self.path = ""
         }
         
+        required public init?(known: Storage.Directory.Known, filename: String) {
+            guard let url = known.url(file: filename), url.isFileURL else { return nil }
+            self.origin = ""
+            self.url = url
+            self.extension = ""
+            self.name = ""
+            self.path = ""
+        }
+        
         @discardableResult public func create(contents: Data?, attributes: [FileAttributeKey:Any]? = nil, replace: Bool = false) -> Bool {
             if replace, exists { delete() }
             return FileManager.default.createFile(atPath: path, contents: contents, attributes: attributes)
@@ -169,23 +178,29 @@ extension Storage.Directory {
 extension Storage.Directory {
     
     public enum Known {
-        case home(path: String)
-        case documents(path: String)
-        case cache(path: String)
-        case temp(path: String)
-    }
+        case home
+        case documents
+        case cache
+        case temp
     
-    public static func path(known: Known) -> String {
-        switch known {
-        case .home(let path)        : return NSHomeDirectory().appending(path: path)
-        case .documents(let path)   : return Storage.Directory.path(known: Storage.Directory.Known.home(path: "Documents")).appending(path)
-        case .cache(let path)       : return Storage.Directory.path(known: Storage.Directory.Known.home(path: "Library/Caches")).appending(path)
-        case .temp(let path)        : return Storage.Directory.path(known: Storage.Directory.Known.home(path: "tmp")).appending(path)
+        public func path(file: String = "") -> String? {
+            let path: String
+            switch self {
+            case .home        : path = NSHomeDirectory()
+            case .documents   : path = NSHomeDirectory().appending(path: "Documents")
+            case .cache       : path = NSHomeDirectory().appending(path: "Library/Caches")
+            case .temp        : path = NSHomeDirectory().appending(path: "tmp")
+            }
+            var exists: ObjCBool = false
+            guard FileManager.default.fileExists(atPath: path, isDirectory: &exists), exists.boolValue else { return nil }
+            return file.count > 0 ? path.appending(path: file) : path
         }
-    }
-    
-    public static func url(known: Known) -> URL? {
-        return URL(fileURLWithPath: path(known: known))
+        
+        public func url(file: String = "") -> URL? {
+            if let value = path(file: file) { return URL(fileURLWithPath: value) }
+            return nil
+        }
+        
     }
     
 }
@@ -194,4 +209,12 @@ extension String {
     public func appending(path: String) -> String {
         return (self as NSString).appendingPathComponent(path)
     }
+}
+
+extension String {
+    var file: Storage.File? { return Storage.File(path: self) }
+}
+
+extension URL {
+    var file: Storage.File? { return Storage.File(url: self) }
 }

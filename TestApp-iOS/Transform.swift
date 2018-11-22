@@ -18,13 +18,13 @@ func testAsTransform() {
         newLine()
         test(string: "false")
     }
-    
+
     log(type: Bool.self) { newLine in
         test(bool: true)
         newLine()
         test(bool: false)
     }
-    
+
     log(type: Int.self) { (newLine) in
         test(int: -55)
         newLine()
@@ -33,7 +33,7 @@ func testAsTransform() {
         test(int: 999)
         newLine()
     }
-    
+
     log(type: Float.self) { (newLine) in
         test(float: -55.0)
         newLine()
@@ -42,7 +42,7 @@ func testAsTransform() {
         test(float: 999.0)
         newLine()
     }
-    
+
     log(type: Double.self) { (newLine) in
         test(float: -55.0)
         newLine()

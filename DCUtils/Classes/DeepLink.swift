@@ -4,6 +4,9 @@
 
 import Foundation
 
+enum DeepLinking {
+}
+
 public func SendDeepLink(_ link: DeepLink?) {
     guard let link = link else {return}
     for item in DeepLinkActionHandlers {

@@ -3,19 +3,17 @@
 //
 
 import UIKit
-import DCUtils
-
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Logs.weak
+        testAsTransform()
         
-        var pair = Pair(1, 1)
-        pair.first = 0
-        pair.second = 1
+//        var pair = Pair(1, 1)
+//        pair.first = 0
+//        pair.second = 1
 //
 ////        testAsTransform()
 //
@@ -26,9 +24,7 @@ class ViewController: UIViewController {
 //        let double: Double = 0
 //
 //        let result = int + bool
-        
-        
-        generateNumbersAutogen()
+//        generateNumbersAutogen()
         
     }
     
